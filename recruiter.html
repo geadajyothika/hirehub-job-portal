@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recruiter Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <h1>Job Portal</h1>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="jobs.html">Jobs</a>
+        </div>
+    </nav>
+
+    <h2 style="text-align:center; margin-top:20px;">
+        Recruiter Dashboard
+    </h2>
+
+    <table border="1" width="80%" align="center">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Applied Job</th>
+        </tr>
+
+        <tr>
+    <td>Jyothika</td>
+    <td>jyothika@gmail.com</td>
+    <td>9876543210</td>
+    <td>Java Developer</td>
+</tr>
+
+        <tr>
+    <td>Rahul</td>
+    <td>rahul@gmail.com</td>
+    <td>9876543211</td>
+    <td>Frontend Developer</td>
+</tr>
+
+    </table>
+    <script>
+let applicant = JSON.parse(localStorage.getItem("applicant"));
+
+if(applicant){
+
+document.getElementById("applicantTable").innerHTML =
+`
+<tr>
+    <td>${applicant.name}</td>
+    <td>${applicant.email}</td>
+    <td>${applicant.phone}</td>
+</tr>
+`;
+
+}
+</script>
+</body>
+</html>
