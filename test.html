@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Saved Applicant Data</h1>
+
+<p id="result"></p>
+
+<script>
+let applicant = JSON.parse(localStorage.getItem("applicant"));
+
+document.getElementById("result").innerHTML =
+"Name: " + applicant.name +
+"<br>Email: " + applicant.email +
+"<br>Phone: " + applicant.phone;
+</script>
+
+</body>
+</html>
